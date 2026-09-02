@@ -15,6 +15,8 @@ func main() {
 	}
 	timerHandler := handler.NewTimerHandler(renderer)
 
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./web/static"))))
+
 	http.HandleFunc("/", timerHandler.TimerPage)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }

@@ -1,0 +1,22 @@
+{{define "settings"}}
+<div class="timer-container">
+    <form action="/" method="post">
+        <div class="timer-controls">
+            <form action="/" method="post"> 
+                <input class="duration" type="number" name="workMinutes" value="{{.WorkDuration}}">
+                <input class="duration" type="number" name="breakMinutes" value="{{.BreakDuration}}">
+                <input class="duration" type="number" name="longBreakMinutes" value="{{.LongBreakDuration}}">
+                <button type="submit">Apply</button>
+            </form>
+        </div>
+    </form>
+</div>
+{{end}}
+
+{{define "scripts_extra"}}
+<script>
+    document.querySelector('button[type="submit"]').addEventListener('click', (event) => {
+        updateDisplay()
+    })
+</script>
+{{end}}
