@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     {{template "header" .}}
@@ -12,6 +14,9 @@
     <main class="container">
         {{block "content" .}}{{end}}
     </main>
+    {{template "settings" .}}
+
+    {{block "scripts_extra" .}}{{end}}
 </body>
 </html>
 
