@@ -1,0 +1,18 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+</head>
+<body>
+    {{template "header" .}}
+
+    <main class="container">
+        {{block "content" .}}{{end}}
+    </main>
+</body>
+</html>
+
+{{end}}
